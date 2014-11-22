@@ -28,7 +28,7 @@ Route::get('/student', function()
 
 Route::get('/regions', function()
 {
-	return 'This is the regions page';
+	return View::make('regions');
 });
 
 Route::get('/orders', function()
