@@ -50,3 +50,4 @@ Route::get('/school', function()
 {
 	return 'This page lists all students created';
 });
+
