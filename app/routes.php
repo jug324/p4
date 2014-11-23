@@ -33,7 +33,7 @@ Route::get('/regions', function()
 
 Route::get('/orders', function()
 {
-	return 'This is the Title Orders page';
+	return View::make('orders');
 });
 
 Route::get('/specialties', function()
@@ -51,3 +51,18 @@ Route::get('/school', function()
 	return 'This page lists all students created';
 });
 
+Route::get('/create-tit77le', function()
+{
+	# Instantiate a new Book model class
+    $region = new Title();
+
+    # Set 
+    $region->name = 'Maven';
+    $region->description = 'Created soon after Rangers, the Maven Title Order was the last created order. As the Hewytt School began to turn out more graduates, they saw the need to place talented youths in positions not necessarily associated with protecting and serving. Mavens are those who wish to be employed in any variety of fields where their knowledge and experience can help the greater good. Many Mavens tend to be altruistic, and enjoy positions that assist in the well-being of others. They also tend to be the most scholarly. As such, the majority of professors at the Hewytt School graduated Maven Title Order.';
+    $region->flag = 'flags/mavenshield.jpg';
+    # This is where the Eloquent ORM magic happens
+    $region->save();
+
+    return 'A new title has been added! Check your database to see...';
+	
+});
