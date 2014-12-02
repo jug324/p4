@@ -13,7 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home');
+});
+
+Route::get('/signup', function()
+{
+	return View::make('user_signup');
 });
 
 Route::get('/login', function()
@@ -36,9 +41,9 @@ Route::get('/orders', function()
 	return View::make('orders');
 });
 
-Route::get('/specialties', function()
+Route::get('/disciplines', function()
 {
-	return 'This is the specialty description page';
+	return View::make('disciplines');
 });
 
 Route::get('/races', function()
@@ -51,18 +56,18 @@ Route::get('/school', function()
 	return 'This page lists all students created';
 });
 
-Route::get('/create-tit77le', function()
+Route::get('/create-dis777cipline', function()
 {
 	# Instantiate a new Book model class
-    $region = new Title();
+    $discipline = new Discipline();
 
     # Set 
-    $region->name = 'Maven';
-    $region->description = 'Created soon after Rangers, the Maven Title Order was the last created order. As the Hewytt School began to turn out more graduates, they saw the need to place talented youths in positions not necessarily associated with protecting and serving. Mavens are those who wish to be employed in any variety of fields where their knowledge and experience can help the greater good. Many Mavens tend to be altruistic, and enjoy positions that assist in the well-being of others. They also tend to be the most scholarly. As such, the majority of professors at the Hewytt School graduated Maven Title Order.';
-    $region->flag = 'flags/mavenshield.jpg';
+    $discipline->name = 'White Mage';
+    $discipline->description = 'White magic is the heart of health and regrowth. Most White Mages tend to the sick and injured';
+    
     # This is where the Eloquent ORM magic happens
-    $region->save();
+    $discipline->save();
 
-    return 'A new title has been added! Check your database to see...';
+    return 'A new discipline has been added! Check your database to see...';
 	
 });
