@@ -48,7 +48,7 @@ Route::get('/disciplines', function()
 
 Route::get('/races', function()
 {
-	return 'This is the race description page';
+	return View::make('races');
 });
 
 Route::get('/school', function()
@@ -56,18 +56,18 @@ Route::get('/school', function()
 	return 'This page lists all students created';
 });
 
-Route::get('/create-dis777cipline', function()
+Route::get('/create-ra7777ce', function()
 {
 	# Instantiate a new Book model class
-    $discipline = new Discipline();
+    $races = new Race();
 
     # Set 
-    $discipline->name = 'White Mage';
-    $discipline->description = 'White magic is the heart of health and regrowth. Most White Mages tend to the sick and injured';
-    
+    $races->name = 'Roccan';
+    $races->description = 'Roccans are a races of giant, muscular creatures that are able to live in environments with harsh conditions, such as mountainsides and deserts. They have immense physical strength, but rarely have they been able to use magic. With the smallest population size, Roccans have survived due to their stamina and hardened skin that resists bruising. They tend to live isolated from the other races and focus mainly on themselves and their culture';
+    $races->traits = "Tall, hardened skin, large and sphere shaped body";
     # This is where the Eloquent ORM magic happens
-    $discipline->save();
+    $races->save();
 
-    return 'A new discipline has been added! Check your database to see...';
+    return 'A new race has been added! Check your database to see...';
 	
 });
