@@ -7,11 +7,7 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
-	publc function __construct() {
-		parent::__construct();
-		
-		$this->beforeFilter('csrf', array('on' => 'post'));
-	}
+	
 	protected function setupLayout()
 	{
 		if ( ! is_null($this->layout))
