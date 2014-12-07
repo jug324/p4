@@ -8,7 +8,15 @@
 	@yield ('head')
 </head>
 <body id="container">
-	<h1>@yield('title', 'Hewytt School')</h1>
+	@if(Session::get('message'))
+        <div class='message'>{{ Session::get('message') }}</div>
+    @endif
+	<a href="/"><h1>@yield('title', 'Hewytt School')</h1></a>
+	@if(Auth::check())
+    <a href='/user/logout'>Log out {{ Auth::user()->email; }}</a>
+@else 
+    <a href='/user/signup'>Sign up</a> or <a href='/user/login'>Log in</a>
+@endif
 	@yield('content')
 
 </body>

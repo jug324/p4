@@ -16,4 +16,11 @@ class Character extends Eloquent {
         
     return $this->belongsTo('Title');
     }
+    public function user() {
+        
+    return $this->belongsTo('User');
+    }
+    public function scopeOwned($query) {
+        return $query->where('creator_id', '=', Auth::id());
+    }
 }

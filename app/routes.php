@@ -10,27 +10,17 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+Route::get('/test', function()
+{
+	echo Auth::id();
+});
 Route::get('/', function()
 {
 	return View::make('home');
 });
 
-Route::get('/signup', function()
-{
-	return View::make('user_signup');
-});
-
-Route::get('/login', function()
-{
-	return 'This is the login page';
-});
-
-Route::get('/student', function()
-{
-	return 'This is the page for students/characters';
-});
-
+Route::controller('user', 'UsersController');
+          
 
 Route::model('character', 'Character');
 
@@ -70,6 +60,7 @@ Route::get('/races', function()
 
 Route::get('/school', function()
 {
-	return 'This page lists all students created';
+
+	return View::make('students');
 });
 

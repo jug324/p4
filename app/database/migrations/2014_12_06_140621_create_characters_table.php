@@ -23,12 +23,14 @@ class CreateCharactersTable extends Migration {
 		$table->integer('discipline_id')->unsigned();
 		$table->integer('title_id')->unsigned();
 		$table->integer('graduated');
+		$table->integer('creator_id')->unsigned();
 		
 # Define foreign keys...
 $table->foreign('race_id')->references('id')->on('races');
 $table->foreign('region_id')->references('id')->on('regions');
 $table->foreign('discipline_id')->references('id')->on('disciplines');
 $table->foreign('title_id')->references('id')->on('titles');
+$table->foreign('creator_id')->references('id')->on('users');
 }); 
 	}
 

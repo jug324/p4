@@ -10,7 +10,7 @@ New User Signup
 	<div class='error'>{{ $message }}</div>
 @endforeach
 
-{{ Form::open(array('url' => '/signup'))}}
+{{ Form::open(array('url' => '/user/signup'))}}
 
 	{{ Form::label('email')}}
 	{{Form::text('email')}}

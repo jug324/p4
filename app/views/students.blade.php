@@ -8,7 +8,7 @@ Characters
 @section('content')
 
 <div class="page-header">
-        <h1>Your Characters</h1>
+        <h1>All Characters</h1>
     </div>
 
     <div class="panel panel-default">
@@ -17,7 +17,7 @@ Characters
         </div>
     </div>
     <a href="/create">Create New Character</a><br>
-
+<?php $characters = Character::all(); ?>
     @if ($characters->isEmpty())
         <p>There are no characters :(</p>
     @else
@@ -29,7 +29,7 @@ Characters
                     <th>Region</th>
                     <th>Discipline</th>
                     <th>Title Order</th>
-                    <th>Action</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -40,11 +40,7 @@ Characters
                     <td>{{ $character->region->name }}</td>
                     <td>{{ $character->discipline->name }}</td>
                     <td>{{ $character->title->name }}<br></td>
-                    <td>
-                        <a href="{{ action('CharacterController@edit', $character->id) }}" class="btn btn-default">Edit</a>
-                        
-                        <a href="{{ action('CharacterController@destroy', $character->id) }}" class="btn btn-danger">Delete</a>
-                    </td>
+                    
                 </tr>
                 @endforeach
             </tbody>

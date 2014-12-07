@@ -1,7 +1,10 @@
 <?php
 
 class CharacterController extends BaseController {
-
+        public function __construct() {
+        	$this->beforeFilter('auth');
+            $this->beforeFilter('csrf', array('on' => 'post'));    
+    } 
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,8 +12,9 @@ class CharacterController extends BaseController {
 	 */
 	public function index()
 	{
-		$characters = Character::all();
-    return View::make('characters', compact('characters'));
+	
+	$characters = Character::owned()->get();	
+    return View::make('characters')->with('characters', $characters);
 		
 	}
 
@@ -40,6 +44,7 @@ class CharacterController extends BaseController {
 		$character->discipline_id = Input::get('discipline');
 		$character->title_id = Input::get('title');
 		$character->graduated = Input::get('count');
+		$character->creator_id = Auth::id();
 		$character->save();
 
 		Session::flash('message', 'Your New Character Has Been Created!');
@@ -55,9 +60,12 @@ class CharacterController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$character = Character::find($id);
-
-				
+		try {
+		$character = Character::findOrFail($id);
+}
+catch(Exception $e) {
+	return Redirect::to('/characters')->with('message', 'Character Not Found');
+}				
         return View::make('bio')->with('character', $character);
 
 	}
@@ -71,7 +79,14 @@ class CharacterController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		$character = Character::find($id);
+		
+		try {
+			
+		$character = Character::owned()->findOrFail($id);
+		}
+catch(Exception $e) {
+	return Redirect::to('/characters')->with('message', 'Character Not Found');
+}				
 		return View::make('edit', compact('character'));
 	}
 
@@ -108,7 +123,7 @@ class CharacterController extends BaseController {
 	public function destroy($id)
 	{
 		
-		$character = Character::findOrFail($id);
+		$character = Character::owned()->findOrFail($id);
 		$character->delete();
 
 		Session::flash('message', 'Your Character Has Been Deleted');
