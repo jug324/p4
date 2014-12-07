@@ -38,13 +38,13 @@ Route::model('character', 'Character');
 Route::get('/characters', 'CharacterController@index');
 Route::get('/character/{id}', 'CharacterController@show');
 Route::get('/create', 'CharacterController@create');
-Route::get('/edit/{character}', 'CharacterController@edit');
-Route::get('/delete/{character}', 'CharacterController@delete');
+Route::get('/edit/{id}', 'CharacterController@edit');
+Route::get('/delete/{id}', 'CharacterController@destroy');
 
 // Handle form submissions.
 Route::post('/create', 'CharacterController@store');
-Route::post('/edit', 'CharacterController@update');
-Route::post('/delete', 'CharacterController@handleDelete');
+Route::post('/edit/{id}', 'CharacterController@update');
+Route::post('/delete', 'CharacterController@destroy');
 
 
 

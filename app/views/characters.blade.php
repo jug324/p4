@@ -40,7 +40,8 @@ Characters
                     <td>{{ $character->title->name }}<br></td>
                     <td>
                         <a href="{{ action('CharacterController@edit', $character->id) }}" class="btn btn-default">Edit</a>
-                        <a href="{{ action('CharacterController@delete', $character->id) }}" class="btn btn-danger">Delete</a>
+                        
+                        <a href="{{ action('CharacterController@destroy', $character->id) }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 @endforeach

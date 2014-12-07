@@ -56,7 +56,7 @@ class CharacterController extends BaseController {
 	public function show($id)
 	{
 		$character = Character::find($id);
-		
+
 				
         return View::make('bio')->with('character', $character);
 
@@ -71,7 +71,8 @@ class CharacterController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$character = Character::find($id);
+		return View::make('edit', compact('character'));
 	}
 
 
@@ -83,7 +84,18 @@ class CharacterController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$character = Character::findOrFail(Input::get('id'));
+		$character->first_name = Input::get('name');
+		$character->last_name = Input::get('last');
+		$character->race_id = Input::get('race');
+		$character->region_id = Input::get('region');
+		$character->discipline_id = Input::get('discipline');
+		$character->title_id = Input::get('title');
+		$character->graduated = Input::get('count');
+		$character->save();
+
+		Session::flash('message', 'Your Character Has Been Updated!');
+		return Redirect::to('characters');
 	}
 
 
@@ -95,7 +107,12 @@ class CharacterController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		
+		$character = Character::findOrFail($id);
+		$character->delete();
+
+		Session::flash('message', 'Your Character Has Been Deleted');
+		return Redirect::to('characters');
 	}
 
 
