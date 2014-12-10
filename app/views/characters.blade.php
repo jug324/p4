@@ -8,20 +8,16 @@ Characters
 @section('content')
 
 <div class="page-header">
-        <h1>Your Characters</h1>
+        <h2>Your Characters</h2>
     </div>
 
-    <div class="panel panel-default">
-        <div class="panel-body">
-            
-        </div>
-    </div>
-    <a href="/create">Create New Character</a><br>
+   
+   <a href="/create" class="btn btn-primary pull-right">Create New Character</a><br>
 
     @if ($characters->isEmpty())
         <p>There are no characters :(</p>
     @else
-        <table class="table table-striped">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Name</th>

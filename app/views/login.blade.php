@@ -6,19 +6,19 @@ Login
 
 
 @section('content')
-
-<h1>Log in</h1>
+<div class="text-center">
+<h2>Login</h2>
 
 {{ Form::open(array('url' => '/user/login')) }}
 
-    Email<br>
+    {{ Form::label('email')}}<br>
     {{ Form::text('email') }}<br><br>
 
-    Password:<br>
+    {{Form::label('password')}}<br>
     {{ Form::password('password') }}<br><br>
 
-    {{ Form::submit('Submit') }}
+    {{ Form::submit('Login', array('class' => 'btn-primary')) }}
 
 {{ Form::close() }}
-
+</div>
 @stop

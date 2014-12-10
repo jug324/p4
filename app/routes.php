@@ -40,7 +40,8 @@ Route::post('/delete', 'CharacterController@destroy');
 
 Route::get('/regions', function()
 {
-	return View::make('regions');
+	$regions = Region::all();
+	return View::make('regions')->with('regions', $regions);
 });
 
 Route::get('/orders', function()

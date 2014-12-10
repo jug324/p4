@@ -7,21 +7,17 @@ Characters
 
 @section('content')
 
-<div class="page-header">
-        <h1>All Characters</h1>
-    </div>
 
-    <div class="panel panel-default">
-        <div class="panel-body">
-            
-        </div>
-    </div>
-    <a href="/create">Create New Character</a><br>
+        <h2>Student Directory</h2>
+
+
+   
+    <a href="/create" class="btn btn-primary pull-right">Create New Character</a><br>
 <?php $characters = Character::all(); ?>
     @if ($characters->isEmpty())
         <p>There are no characters :(</p>
     @else
-        <table class="table table-striped">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -39,7 +35,7 @@ Characters
                     <td>{{ $character->race->name }}</td>
                     <td>{{ $character->region->name }}</td>
                     <td>{{ $character->discipline->name }}</td>
-                    <td>{{ $character->title->name }}<br></td>
+                    <td>{{ $character->title->name }}</td>
                     
                 </tr>
                 @endforeach
