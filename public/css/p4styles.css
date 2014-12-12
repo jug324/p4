@@ -1,6 +1,11 @@
 /* CSS Document */
 /* Body Layout */
-#container {margin: 1em auto; padding:1em; font-family:"Verdana", Geneva, sans-serif; text-decoration:none;}
+#container {margin: 1em auto;
+		padding-top:1em;
+		padding-left:10em;
+		padding-right:10em;
+		font-family:"Verdana", Geneva, sans-serif;
+		text-decoration:none;}
 
 h1 {text-align:center; font-size:34px;}
 

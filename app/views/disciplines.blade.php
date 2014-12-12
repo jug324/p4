@@ -5,6 +5,8 @@ Discipline Specialties
 @stop
 
 @section('content')
+<div class="table-compact">
+	<h1>@yield('title')</h1>
 <p>Each student of the Hewytt School focuses on one of the following disciplines of study.</p>
 <table class="table table-bordered table-condensed table-compact">
 	<tr>
@@ -20,4 +22,6 @@ Discipline Specialties
 
 @endforeach
    </tbody>
+</table>
+</div>
 @stop

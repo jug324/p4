@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>@yield('title', 'Hewytt School of Spells and Skills')</title>
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-	<link rel="stylesheet" href="../css/p4styles.css" type="text/css"/>
+	<link rel="stylesheet" href="{{ asset('css/p4styles.css') }}" type="text/css"/>
   {{ HTML::script('js/jquery.js')}}
 	{{ HTML::script('js/bootstrap.min.js')}}
   

@@ -26,7 +26,7 @@ Create New Character
       }
 
       ?>
-</select><small><a href="/races"> Information on Races</a></small><br>
+</select><small><a href="/races" target="_blank"> Information on Races</a></small><br>
 {{Form::label('region', 'Home Region');}}
 <select name="region" id="region">
       
@@ -38,7 +38,7 @@ Create New Character
       }
 
       ?>
-</select><small><a href="/regions"> Information on Regions</a></small><br>
+</select><small><a href="/regions" target="_blank"> Information on Regions</a></small><br>
 {{Form::label('discipline', 'Discipline');}}
 <select name="discipline" id="discipline">
       
@@ -50,7 +50,7 @@ Create New Character
       }
 
       ?>
-</select><small><a href="/disciplines"> Information on Disciplines</a></small><br>
+</select><small><a href="/disciplines" target="_blank"> Information on Disciplines</a></small><br>
 {{Form::label('title', 'Title Order');}}
 <select name="title" id="title">
       
@@ -62,7 +62,7 @@ Create New Character
       }
 
       ?>
-</select><small><a href="/orders"> Information on Title Orders</a></small><br>
+</select><small><a href="/orders" target="_blank"> Information on Title Orders</a></small><br>
 {{Form::label('year', 'Graduation Year');}}
 {{Form::selectRange('count', 990, 1010);}}<br><br>
 {{Form::submit('Create New Character', array('name' => 'submit'));}}

@@ -19,6 +19,9 @@ Login
 
     {{ Form::submit('Login', array('class' => 'btn-primary')) }}
 
-{{ Form::close() }}
+{{ Form::close() }}<br>
+<p class="text-center">Not yet a member? <a href="/user/signup">Sign up!</a></p>
+<br>
+<p class="text-center">Forget your password? <a href="/password/reset">Reset it.</a></p>
 </div>
 @stop

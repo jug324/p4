@@ -5,6 +5,8 @@ Title Orders of Hewytt
 @stop
 
 @section('content')
+<div class="table-compact">
+	<h1>@yield('title')</h1>
 <p>The Title Orders of Hewytt are honors bestowed upon graduates of the Hewytt School who complete the entirety of at least one discipline, or about eight years of study.</p>
 <table class="table table-bordered table-condensed table-compact Orders">
 	<tr>
@@ -23,5 +25,7 @@ Title Orders of Hewytt
 
 @endforeach
 </tbody>
+</table>
+</div>
    
 @stop

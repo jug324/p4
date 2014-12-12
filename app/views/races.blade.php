@@ -5,6 +5,8 @@ Races of Farenia
 @stop
 
 @section('content')
+<div class="table-compact">
+	<h1>@yield('title')</h1>
 <p>The continent of Farenia, along with the Archipelago, are inhabited by a diverse group of creatures.</p>
 <table class="table table-bordered table-condensed table-compact">
 	<tr>
@@ -22,4 +24,6 @@ Races of Farenia
 
 @endforeach
    </tbody>
+</table>
+</div>
 @stop

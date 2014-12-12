@@ -20,6 +20,23 @@ Route::get('/school', 'HomeController@showStudents');
 
 // User signup and login
 Route::controller('user', 'UsersController');
+
+Route::get('password/reset', array(
+  'uses' => 'PasswordController@remind',
+  'as' => 'remind'
+));
+Route::post('password/reset', array(
+  'uses' => 'PasswordController@request',
+  'as' => 'request'
+));
+Route::get('password/reset/{token}', array(
+  'uses' => 'PasswordController@reset',
+  'as' => 'reset'
+));
+Route::post('password/reset/{token}', array(
+  'uses' => 'PasswordController@update',
+  'as' => 'update'
+));
           
 
 Route::model('character', 'Character');
