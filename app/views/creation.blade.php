@@ -6,14 +6,17 @@ Create New Character
 
 @section('content')
 <h1>New Student Registration</h1>
+@foreach ($errors->all() as $message)
+  <div class='error'>{{ $message }}</div>
+@endforeach
 {{Form::open(array('action'=> 'CharacterController@store', 'method' => 'POST'));}}
-{{Form::label('name', 'First Name');}}
-{{Form::text('name');}}
-{{Form::label('last', 'Last Name');}}
-{{Form::text('last');}}<br>
-{{Form::label('race', 'Character race');}}
+{{Form::label('first_name', 'First Name');}}
+{{Form::text('first_name');}}
+{{Form::label('last_name', 'Last Name');}}
+{{Form::text('last_name');}}<br>
+{{Form::label('race', 'Character Race');}}
 <select name="race" id="race">
-      <option>Choose Race</option>
+      
       <?php
       $races = Race::all();
       foreach($races as $race) {
@@ -25,7 +28,7 @@ Create New Character
 </select><br>
 {{Form::label('region', 'Home Region');}}
 <select name="region" id="region">
-      <option>Choose Region</option>
+      
       <?php
       $regions = Region::all();
       foreach($regions as $region) {
@@ -37,7 +40,7 @@ Create New Character
 </select><br>
 {{Form::label('discipline', 'Discipline');}}
 <select name="discipline" id="discipline">
-      <option>Choose Discipline</option>
+      
       <?php
       $discipline = Discipline::all();
       foreach($discipline as $discipline) {
@@ -49,7 +52,7 @@ Create New Character
 </select><br>
 {{Form::label('title', 'Title Order');}}
 <select name="title" id="title">
-      <option>Choose Title Order</option>
+      
       <?php
       $titles = Title::all();
       foreach($titles as $title) {

@@ -36,9 +36,24 @@ class CharacterController extends BaseController {
 	 */
 	public function store()
 	{
+		$rules = array(
+    	'first_name' => 'required',
+    	'last_name' => 'required',
+    	
+		);          
+
+		$validator = Validator::make(Input::all(), $rules);
+
+		if($validator->fails()) {
+
+    	return Redirect::to('/create')
+        ->with('message', 'Character creation failed; please fix the errors listed below.')
+        ->withInput()
+        ->withErrors($validator);
+}
 		$character = new Character;
-		$character->first_name = Input::get('name');
-		$character->last_name = Input::get('last');
+		$character->first_name = Input::get('first_name');
+		$character->last_name = Input::get('last_name');
 		$character->race_id = Input::get('race');
 		$character->region_id = Input::get('region');
 		$character->discipline_id = Input::get('discipline');
@@ -100,8 +115,7 @@ catch(Exception $e) {
 	public function update($id)
 	{
 		$character = Character::findOrFail(Input::get('id'));
-		$character->first_name = Input::get('name');
-		$character->last_name = Input::get('last');
+		
 		$character->race_id = Input::get('race');
 		$character->region_id = Input::get('region');
 		$character->discipline_id = Input::get('discipline');

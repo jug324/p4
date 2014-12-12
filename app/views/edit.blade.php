@@ -6,12 +6,10 @@ Character Update
 
 @section('content')
 <h1>Change Student Registration</h1>
+<h2>{{$character->first_name}} {{$character->last_name}}</h2>
 {{Form::open(array('action'=> 'CharacterController@update', 'method' => 'POST'));}}
 <input type="hidden" name="id" value="{{ $character->id }}">
-{{Form::label('name', 'First Name');}}
-{{Form::text('name', $character->first_name);}}
-{{Form::label('last', 'Last Name');}}
-{{Form::text('last', $character->last_name);}}<br>
+
 {{Form::label('race', 'Character race');}}
 <select name="race" id="race">
       <?php

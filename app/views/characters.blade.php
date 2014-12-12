@@ -15,7 +15,7 @@ Characters
    <a href="/create" class="btn btn-primary pull-right">Create New Character</a><br>
 
     @if ($characters->isEmpty())
-        <p>There are no characters :(</p>
+        <p>There are no characters</p>
     @else
         <table class="table">
             <thead>
