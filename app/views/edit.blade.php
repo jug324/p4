@@ -6,7 +6,8 @@ Character Update
 
 @section('content')
 <h1>Change Student Registration</h1>
-<h2>{{$character->first_name}} {{$character->last_name}}</h2>
+<div class="form-compact">
+<h2><a href="/character/{{$character->id}}">{{$character->first_name}} {{$character->last_name}}</a></h2>
 {{Form::open(array('action'=> 'CharacterController@update', 'method' => 'POST'));}}
 <input type="hidden" name="id" value="{{ $character->id }}">
 
@@ -62,6 +63,6 @@ Character Update
 {{Form::selectRange('count', 990, 1010, $character->graduated);}}<br>
 {{Form::submit('Update Character', array('name' => 'submit'));}}<br>
 {{Form::close();}}
-
+</div>
 
 @stop

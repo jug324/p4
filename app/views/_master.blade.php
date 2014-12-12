@@ -14,7 +14,7 @@
 	@if(Session::get('message'))
         <div class='alert alert-danger'>{{ Session::get('message') }}</div>
     @endif
-	<h1><a href="/">Hewytt School of Spells and Skills</a></h1>
+	<h1 class="small-caps"><a href="/">Hewytt School of Spells and Skills</a></h1>
    	
 <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
@@ -25,9 +25,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">HEWYTT</a>
+      <a id="logo" href="/"> </a>
+    
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse small-caps" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/school">Student Directory</a></li>
         <li><a href="/orders">Title Orders</a></li>
