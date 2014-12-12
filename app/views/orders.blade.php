@@ -6,20 +6,22 @@ Title Orders of Hewytt
 
 @section('content')
 <p>The Title Orders of Hewytt are honors bestowed upon graduates of the Hewytt School who complete the entirety of at least one discipline, or about eight years of study.</p>
-<table>
+<table class="table table-bordered table-condensed table-compact Orders">
 	<tr>
-		<th>Order</th>
-		<th>Shield</th>
-		<th>Description</th>
+		<th class="center">Order</th>
+		<th class="center">Shield</th>
+		<th class="center">Description</th>
 	</tr>
 	
-<?php 
-$regions = Title::all();
-foreach($regions as $title) {
-	echo '<tr><td>'.$title->name.'</td>';
-	echo '<td><img src="'.$title->flag.'"height="100px"></td>';
-	echo '<td>'.$title->description.'</td></tr>';
-}
-?>
+<tbody>
+@foreach($regions as $title)
+	<tr>
+		<td style="vertical-align:middle" class="center {{$title->name}}">{{$title->name}}</td>
+		<td style="vertical-align:middle"><img src="{{$title->flag}}" height="150px"></td>
+		<td style="vertical-align:middle">{{$title->description}}</td>
+	</tr>
+
+@endforeach
+</tbody>
    
 @stop

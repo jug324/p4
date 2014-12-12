@@ -15,8 +15,7 @@
         <div class='alert alert-danger'>{{ Session::get('message') }}</div>
     @endif
 	<h1><a href="/">Hewytt School of Spells and Skills</a></h1>
-
-    	
+   	
 <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -59,6 +58,7 @@
     </div>
 </div>
 </nav>
+
 
 	@yield('content')
 

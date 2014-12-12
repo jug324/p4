@@ -6,20 +6,20 @@ Races of Farenia
 
 @section('content')
 <p>The continent of Farenia, along with the Archipelago, are inhabited by a diverse group of creatures.</p>
-<table>
+<table class="table table-bordered table-condensed table-compact">
 	<tr>
-		<th>Race</th>
-		<th>Description</th>
-		<th>Traits</th>
+		<th class="center">Race</th>
+		<th class="center">Description</th>
+		<th class="center">Traits</th>
 	</tr>
-	
-<?php 
-$races = Race::all();
-foreach($races as $race) {
-	echo '<tr><td>'.$race->name.'</td>';
-	echo '<td>'.$race->description.'</td>';
-	echo '<td>'.$race->traits.'</td></tr>';
-}
-?>
-   
+	<tbody>
+@foreach($races as $race) 
+	<tr>
+		<td style="vertical-align:middle" class="center race">{{$race->name}}</td>
+		<td style="vertical-align:middle">{{$race->description}}</td>
+		<td style="vertical-align:middle" class="center">{{$race->traits}}</td>
+	</tr>
+
+@endforeach
+   </tbody>
 @stop

@@ -17,7 +17,33 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		return View::make('home');
+	}
+
+	public function showRegions()
+	{
+		$regions = Region::all();
+	return View::make('regions')->with('regions', $regions);
+	}
+	
+	public function showRaces()
+	{
+		$races = Race::all();
+	return View::make('races')->with('races', $races);
+	}
+	public function showDisciplines()
+	{
+		$discipline = Discipline::all();
+	return View::make('disciplines')->with('discipline', $discipline);
+	}
+	public function showOrders()
+	{
+		$regions = Title::all();
+	return View::make('orders')->with('regions', $regions);
+	}
+	public function showStudents()
+	{
+		return View::make('students');
 	}
 
 }

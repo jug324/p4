@@ -6,18 +6,18 @@ Discipline Specialties
 
 @section('content')
 <p>Each student of the Hewytt School focuses on one of the following disciplines of study.</p>
-<table>
+<table class="table table-bordered table-condensed table-compact">
 	<tr>
-		<th>Discipline</th>
-		<th>Description</th>
+		<th class="center">Discipline</th>
+		<th class="center">Description</th>
 	</tr>
-	
-<?php 
-$discipline = Discipline::all();
-foreach($discipline as $discipline) {
-	echo '<tr><td>'.$discipline->name.'</td>';
-	echo '<td>'.$discipline->description.'</td></tr>';
-}
-?>
-   
+	<tbody>
+@foreach($discipline as $discipline)
+	<tr class="{{$discipline->name}} center">
+		<td style="vertical-align:middle" class="discipline">{{$discipline->name}}</td>
+		<td>{{$discipline->description}}</td>
+	</tr>
+
+@endforeach
+   </tbody>
 @stop
