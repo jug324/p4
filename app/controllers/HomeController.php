@@ -38,8 +38,8 @@ class HomeController extends BaseController {
 	}
 	public function showOrders()
 	{
-		$regions = Title::all();
-	return View::make('orders')->with('regions', $regions);
+		$titles = Title::all();
+	return View::make('orders')->with('titles', $titles);
 	}
 	public function showStudents()
 	{

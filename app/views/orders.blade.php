@@ -16,7 +16,7 @@ Title Orders of Hewytt
 	</tr>
 	
 <tbody>
-@foreach($regions as $title)
+@foreach($titles as $title)
 	<tr>
 		<td style="vertical-align:middle" class="center {{$title->name}}">{{$title->name}}</td>
 		<td style="vertical-align:middle"><img src="{{$title->flag}}" height="150px"></td>
