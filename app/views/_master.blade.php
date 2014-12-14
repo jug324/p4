@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('title', 'Hewytt School of Spells and Skills')</title>
-	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/p4styles.css') }}" type="text/css"/>
   {{ HTML::script('js/jquery.js')}}
 	{{ HTML::script('js/bootstrap.min.js')}}
@@ -28,21 +28,16 @@
       <a id="logo" href="/"> </a>
     
     </div>
-    <div class="collapse navbar-collapse small-caps" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+    <div class="collapse  navbar-collapse small-caps" id="bs-example-navbar-collapse-1">
+      <ul class="nav  navbar-nav">
         <li><a href="/school">Student Directory</a></li>
         <li><a href="/orders">Title Orders</a></li>
         <li><a href="/races">Races</a></li>
         <li><a href="/disciplines">Disciplines</a></li>
         <li><a href="/regions">Regions</a></li>
-        <li class="dropdown">
-          <a href="/characters" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Characters <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/characters">Your Characters</a></li>
+        <li><a href="/characters">Your Characters</a></li>
             <li><a href="/create">Create NEW Character</a></li>
-            
-          </ul>
-        </li>
+        
        </ul>
        <p class="navbar-text navbar-right">
 @if(Auth::check())

@@ -53,7 +53,7 @@ Route::post('/create', 'CharacterController@store');
 Route::post('/edit/{id}', 'CharacterController@update');
 Route::post('/delete', 'CharacterController@destroy');
 
-// Test Routes
+/* // Test Routes
 Route::get('/trigger-error',function() {
 
     # Class Foobar should not exist, so this should create an error
@@ -109,4 +109,4 @@ Route::get('/debug', function() {
 
     
 
-});
+});  */

@@ -49,7 +49,7 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
-	return 'Oh no, something went wrong! <a href="/">Return to the homepage.</a>';
+	return View::make('error');
 });
 
 /*
