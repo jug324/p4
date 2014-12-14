@@ -12,7 +12,7 @@
 </head>
 <body id="container">
 <div class="error-page form-compact">
-<img src="../images/sadface.png" >
+<img src="{{ asset('images/sadface.png')}}" >
 <p>Oh no, something went wrong!<br> <a href="/">Return to the homepage.</a></p>
 </div>
 </body>
