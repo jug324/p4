@@ -8,7 +8,7 @@ Races of Farenia
 <div class="table-compact">
 	<h1>@yield('title')</h1>
 <p>The continent of Farenia, along with the Archipelago, are inhabited by a diverse group of creatures.</p>
-<table class="table table-bordered table-condensed table-compact">
+<table class="table table-bordered table-condensed">
 	<tr>
 		<th class="center">Race</th>
 		<th class="center">Description</th>

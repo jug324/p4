@@ -7,8 +7,8 @@ Discipline Specialties
 @section('content')
 <div class="table-compact">
 	<h1>@yield('title')</h1>
-<p>Each student of the Hewytt School focuses on one of the following disciplines of study.</p>
-<table class="table table-bordered table-condensed table-compact">
+<p>Each student of the Hewytt School focuses on at least one of the following disciplines of study.</p>
+<table class="table table-bordered table-condensed ">
 	<tr>
 		<th class="center">Discipline</th>
 		<th class="center">Description</th>
