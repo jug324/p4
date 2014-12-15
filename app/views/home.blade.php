@@ -12,7 +12,7 @@ that you can use to go on explorations, adventures, or other shenanigans. The ch
 research your character's Race, Discipline, Title Order, and home Region. Have a look at the world map of Farenia below as well.</p><br>
 <p>Once you've got a character in mind, make sure you're signed in and then use the <span class="small-caps">create new character</span> link to add a member to your roster.</p>
 <a href="images/farenia2.jpg">
-<img src="images/farenia2.jpg" width="100%">
+<img src="images/farenia2.jpg"  alt="Farenia overworld">
 </a>
 </div>
 

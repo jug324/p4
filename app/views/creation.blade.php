@@ -63,7 +63,7 @@ Create New Character
 
       ?>
 </select><small><a href="/orders" target="_blank"> Information on Title Orders</a></small><br>
-{{Form::label('year', 'Graduation Year');}}
+{{Form::label('count', 'Graduation Year');}}
 {{Form::selectRange('count', 990, 1010);}}<br><br>
 {{Form::submit('Create New Character', array('name' => 'submit'));}}
 {{Form::close();}}

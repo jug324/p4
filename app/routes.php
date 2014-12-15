@@ -39,7 +39,7 @@ Route::post('password/reset/{token}', array(
 ));
           
 
-Route::model('character', 'Character');
+
 
 // Show Character pages.
 Route::get('/characters', 'CharacterController@index');

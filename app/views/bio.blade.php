@@ -7,7 +7,7 @@
 @section('content')
 <div class="table-compact">
 
-<p>{{$character->first_name}} {{$character->last_name}} is a {{$character->race->name}} hailing from the {{$character->region->name}} Region.
+<p>{{{$character->first_name}}} {{{$character->last_name}}} is a {{$character->race->name}} hailing from the {{$character->region->name}} Region.
 After attending the Hewytt School, they graduated in {{$character->graduated}} with a specialty of
 	{{$character->discipline->name}}. They received the Title Order of {{$character->title->name}}.
 
@@ -15,11 +15,11 @@ After attending the Hewytt School, they graduated in {{$character->graduated}} w
 
 <div class="pull-left center">
 <p class="center">{{$character->region->name}} Native</p>
-<img src="../{{$character->region->flag}}" height="150px">
+<img src="../{{$character->region->flag}}" height="150" alt="home flag">
 </div>
 <div class="pull-right center">
-<p class="center">Proud Member of the {{$character->title->name}} Order</p>
-<img src="../{{$character->title->flag}}" height="150px">
+<p class="center">Title of {{$character->title->name}}</p>
+<img src="../{{$character->title->flag}}" height="150" alt="title shield">
 </div>
 <div class="defloat">
 <br><br>

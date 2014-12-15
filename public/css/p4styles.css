@@ -12,7 +12,7 @@
 h1 {text-align:center; font-size:34px;}
 
 h3, h4 {text-align:center;}
-
+img {width:100%;}
 .table-compact { width:90%; margin: 1em auto;}
 .form-compact {
         width: 450px;
@@ -120,5 +120,3 @@ label {color:#FFF; text-align:left;}
 /* Races Styling */
 .race {font-size:16px; font-weight:bold;}
 
-/* Bio Styling */
-.bio {background-image:{{$character->region->flag}};}

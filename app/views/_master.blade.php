@@ -12,7 +12,7 @@
 </head>
 <body id="container">
 	@if(Session::get('message'))
-        <div class='alert alert-danger'>{{ Session::get('message') }}</div>
+        <div class="alert alert-danger">{{ Session::get('message') }}</div>
     @endif
 	<h1 class="small-caps"><a href="/">Hewytt School of Spells and Skills</a></h1>
    	
@@ -42,11 +42,11 @@
        <p class="navbar-text navbar-right">
 @if(Auth::check())
     
-    	<a href='/user/logout'>Log out {{ Auth::user()->email; }}</a>
+    	<a href="/user/logout">Log out {{ Auth::user()->email; }}</a>
     
 @else 
     
-    	<a href='/user/signup'>Sign up</a> | <a href='/user/login'>Log in</a>
+    	<a href="/user/signup">Sign up</a> | <a href="/user/login">Log in</a>
     
 
 @endif
@@ -57,6 +57,11 @@
 
 
 	@yield('content')
+<footer>
+  <br>
+  <br>
+  <small>This site is based upon the novel series, <a class ="small-caps" href="http://amzn.com/148253746X ">The Tales of Jayrith</a></small>
+</footer>
 
 </body>
 </html>

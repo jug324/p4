@@ -23,7 +23,7 @@ Regions of Farenia
 @foreach($regions as $region)
 <tr class="{{$region->name}}">
 <td style="vertical-align:middle" class="center region">{{$region->name}}</td>
-<td style="vertical-align:middle"><img src="{{$region->flag}}" height="150px"></td>
+<td style="vertical-align:middle"><img src="{{$region->flag}}"  width="150" alt="region flag"></td>
 <td style="vertical-align:middle">{{$region->description}}</td>
 	</tr>
 	@endforeach
